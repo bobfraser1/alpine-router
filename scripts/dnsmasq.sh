@@ -1,15 +1,13 @@
-#!/bin/sh
-
-apk add dnsmasq
-rc-update add dnsmasq
+#!/bin/bash
 
 # INTERFACE - interface to listen for DHCP and DNS requests
 # DOMAIN - domain for the private network
 # DHCP_RANGE - lower bound, upper bound, lease timeout
 
-# INTERFACE=eth1
-# DOMAIN=example.com
-# DHCP_RANGE="192.168.1.100,192.168.1.254,12h"
+set -eu
+
+apk add dnsmasq
+rc-update add dnsmasq
 
 sed -i \
 "s/^#\?\(interface=\).*/\1$INTERFACE/; \
@@ -18,5 +16,3 @@ sed -i \
  s/^#\?\(domain=\)[^,]*$/\1$DOMAIN/; \
  s/^#\?\(dhcp-range=\)\d\{1,3\}.\d\{1,3\}.\d\{1,3\}.\d\{1,3\},\d\{1,3\}.\d\{1,3\}.\d\{1,3\}.\d\{1,3\},[^,]*$/\1$DHCP_RANGE/" \
 /etc/dnsmasq.conf
-
-#/sbin/reboot

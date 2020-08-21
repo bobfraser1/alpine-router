@@ -33,5 +33,7 @@ Set these environment variables or edit them in `dnsmasq.sh`:
     DHCP_RANGE - lower bound, upper bound, lease timeout
 
 **Note:** `dnsmasq.sh` uses `sed` to automate the editing of `dnsmasq.conf`'.
-`Sed` solutions have the dual bonus of being brittle *and* hard to read. :smile:
+`Sed` solutions have the dual bonus of being brittle _and_ hard to read. :smile:
 You would be wise to do a trial run and see that you get the results you expect.
+
+Edit `dhcp-hosts.sh` and add static IP and hostname assignments by MAC address.
