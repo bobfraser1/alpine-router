@@ -7,7 +7,7 @@ VM_CPUS = '2'
 PUBLIC_NET = 'eth0'
 PRIVATE_NET = 'eth1'
 INTERFACE = 'eth1'
-DOMAIN = 'bobfraser1.local'
+DOMAIN = 'example.com'
 DHCP_RANGE = '192.168.1.100,192.168.1.254,12h'
 
 Vagrant.configure('2') do |config|
