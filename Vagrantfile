@@ -1,4 +1,4 @@
-VAGRANT_BOX = 'generic/alpine312'
+VAGRANT_BOX = 'bobfraser1/alpine314'
 VM_HOSTNAME = 'router'
 VM_NETWORK = 'vboxnet1'
 VM_IP = '192.168.1.2'
@@ -17,7 +17,8 @@ Vagrant.configure('2') do |config|
   config.vm.provision 'shell',
                       path: 'scripts/iptables.sh',
                       env: {
-                        'PUBLIC_NET' => PUBLIC_NET, 'PRIVATE_NET' => PRIVATE_NET
+                        'PUBLIC_NET' => PUBLIC_NET,
+                        'PRIVATE_NET' => PRIVATE_NET
                       }
   config.vm.provision 'shell',
                       path: 'scripts/dnsmasq.sh',

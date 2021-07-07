@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 
 # PUBLIC_NET - external or public network
 # PRIVATE_NET - internal or private network

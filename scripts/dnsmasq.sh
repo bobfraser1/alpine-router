@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 
 # INTERFACE - interface to listen for DHCP and DNS requests
 # DOMAIN - domain for the private network

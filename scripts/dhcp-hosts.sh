@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 
 #Assign static ip addresse by MAC address: dhcp-host=<MAC>,<HOSTNAME>,<IP>,<LEASE-TIMEOUT>
 
