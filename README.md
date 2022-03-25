@@ -21,7 +21,7 @@ In VirtualBox create a [private network](https://www.virtualbox.org/manual/ch06.
 
 Edit the `Vagrantfile`. Update the private network with the VirtualBox network name and the static IP address for the router. Example:
 
-    config.vm.network "private_network", ip: "192.168.1.2", name: "vboxnet1"
+    config.vm.network "private_network", ip: "192.168.60.2", name: "vboxnet1"
 
 Update the shell provisioners to set the following environment variables:
 
