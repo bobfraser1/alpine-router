@@ -1,4 +1,4 @@
-VAGRANT_BOX = 'bobfraser1/alpine315'
+VAGRANT_BOX = 'bobfraser1/alpine316'
 VM_HOSTNAME = 'router'
 VM_NETWORK = 'vboxnet1'
 VM_IP = '192.168.60.2'
@@ -14,6 +14,7 @@ Vagrant.configure('2') do |config|
   config.vm.box = VAGRANT_BOX
   config.vm.hostname = VM_HOSTNAME
   config.vm.network 'private_network', name: VM_NETWORK, ip: VM_IP
+  config.vm.synced_folder '.', '/vagrant', disabled: true
   config.vm.provision 'shell',
                       path: 'scripts/iptables.sh',
                       env: {
